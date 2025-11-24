@@ -1,0 +1,54 @@
+{
+  "checkins": [
+    {
+      "date": "2025-11-24",
+      "time": "16:55:02",
+      "mood": "down",
+      "energy": "tired",
+      "objectives": [
+        "do a little indoor workout"
+      ],
+      "summary": "Since your energy is low, break your goals into smaller steps and take breaks between them. Focusing on one goal is smart. Break it into smaller steps if needed."
+    },
+    {
+      "date": "2025-11-24",
+      "time": "16:58:27",
+      "mood": "low",
+      "energy": "tired",
+      "objectives": [
+        "prepare for tomorrow's exam"
+      ],
+      "summary": "Since your energy is low, break your goals into smaller steps and take breaks between them. Focusing on one goal is smart. Break it into smaller steps if needed."
+    },
+    {
+      "date": "2025-11-24",
+      "time": "17:02:25",
+      "mood": "low",
+      "energy": "tired",
+      "objectives": [
+        "prepare for exam practical"
+      ],
+      "summary": "Since your energy is low, break your goals into smaller steps and take breaks between them. Focusing on one goal is smart. Break it into smaller steps if needed."
+    },
+    {
+      "date": "2025-11-24",
+      "time": "17:32:42",
+      "mood": "low",
+      "energy": "tired",
+      "objectives": [
+        "prepare for tomorrow's practical exam"
+      ],
+      "summary": "Since your energy is low, break your goals into smaller steps and take breaks between them. Focusing on one goal is smart. Break it into smaller steps if needed."
+    },
+    {
+      "date": "2025-11-24",
+      "time": "17:45:44",
+      "mood": "very low",
+      "energy": "tired",
+      "objectives": [
+        "prepare for NCM practical"
+      ],
+      "summary": "Since your energy is low, break your goals into smaller steps and take breaks between them. Focusing on one goal is smart. Break it into smaller steps if needed."
+    }
+  ]
+}
