@@ -12,8 +12,8 @@ from livekit.agents import (
     cli,
     metrics,
     tokenize,
-    function_tool,
-    RunContext
+    # function_tool,
+    # RunContext
 )
 from livekit.plugins import murf, silero, google, deepgram, noise_cancellation
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
@@ -23,47 +23,15 @@ logger = logging.getLogger("agent")
 load_dotenv(".env.local")
 
 
-class FriendlyBarista(Agent):
+class Assistant(Agent):
     def __init__(self) -> None:
         super().__init__(
-            instructions="""You are a friendly, high-energy barista at "Code & Coffee". 
-                            Your only goal is to take a complete coffee order efficiently and confirm it.
-                            
-                            REQUIRED FIELDS (you MUST collect all 4):
-                            1. Drink Type (e.g., Latte, Cappuccino, Americano)
-                            2. Size (e.g., Small, Medium, Large)
-                            3. Milk Type (e.g., Oat, Almond, Regular, None)
-                            4. Customer Name
-
-                            YOUR PROCESS:
-                            1. Listen to the user's request.
-                            2. IMMEDIATELY call the function 'update_order' with any fields they mentioned.
-                            3. Check your memory: Do you have all 4 required fields?
-                            4. If ANY are missing, ask for that ONE specific missing item using a conversational tone.
-                            Examples:
-                            - "Great! What size would you like for that Latte?"
-                            - "And what type of milk do you prefer?"
-                            - "Perfect! What's your name for the order?"
-                            5. Repeat until all 4 required fields are complete.
-                            6. Ask "Any extras?" (optional - syrup, extra shot, etc.) only ONCE.
-                            7. Once all 4 required fields are collected, call 'finalize_order'.
-
-                            CRITICAL RULES:
-                            - You CANNOT finalize the order without: Drink Type, Size, Milk, Name.
-                            - Do NOT ask for multiple fields at once (e.g., "What size and milk?").
-                            - Do NOT suggest items they didn't request.
-                            - Keep responses SHORT and CONVERSATIONAL (optimized for spoken word).
-                            - Once you call finalize_order, confirm: "Your order is confirmed! [Recap order]"
-                        """,
+            instructions="""You are a helpful voice AI assistant. The user is interacting with you via voice, even if you perceive the conversation as text.
+            You eagerly assist users with their questions by providing information from your extensive knowledge.
+            Your responses are concise, to the point, and without any complex formatting or punctuation including emojis, asterisks, or other symbols.
+            You are curious, friendly, and have a sense of humor.""",
         )
-        self.order_state = {
-            "drinkType": None,
-            "size": None,
-            "milk": None,
-            "extras": [],
-            "name": None
-        }
-        
+
     # To add tools, use the @function_tool decorator.
     # Here's an example that adds a simple weather tool.
     # You also have to add `from livekit.agents import function_tool, RunContext` to the top of this file
@@ -81,79 +49,10 @@ class FriendlyBarista(Agent):
     #
     #     return "sunny with a temperature of 70 degrees."
 
-    @function_tool
-    async def update_order(self, context:RunContext = None, drinkType:str = None, size:str = None, milk:str = None, name:str = None, extras:list = None):
-        
-        """Update the customer's coffee order with provided details.
-        Call this when the customer mentions their drink, size, milk preference, or name.
-        
-        Arguments:
-            drinkType: The type of coffee (e.g. , 'latte', 'cappuccino', 'americano')
-            size: The size (e.g., 'small', 'medium', 'large')
-            milk: The milk type (e.g., 'oat', 'almond', 'regular', 'none')
-            name: The customer's name for the order
-            extras: Any additions like 'extra shot', 'caramel syrup'
-        """
-        
-        logger.info(f'BEFORE UPDATE - drinkType param: {drinkType}, size param: {size}, milk param: {milk}, name param: {name}')
-        logger.info(f'BEFORE UPDATE - Current state: {self.order_state}')
-        if drinkType:
-            self.order_state['drinkType'] = drinkType
-        if size:
-            self.order_state['size'] = size
-        if milk:
-            self.order_state['milk'] = milk
-        if name:
-            self.order_state['name'] = name
-        if extras:
-            self.order_state['extras'].append(extras)
-            
-        logger.info(f'AFTER UPDATE - Current state: {self.order_state}')
-            
-        return f"Order updated: {self.order_state}"
-    
-    @function_tool
-    async def finalize_order(self, context:RunContext = None):
-        """Finalize and confirm the customer's coffee order.
-    
-            Call this ONLY when you have collected all 4 required fields:
-            - Drink Type
-            - Size
-            - Milk Type
-            - Customer Name
-            
-            This function will:
-            1. Validate that all 4 required fields are present
-            2. Return an error if any field is missing
-            3. Confirm the complete order if valid
-        """
-        
-        logger.info(f"FINALIZE CALLED - Current state: {self.order_state}")
-        fields = ['drinkType', 'size', 'milk', 'name']
-        missing = [field for field in fields if not self.order_state[field]]
-        logger.info(f"FINALIZE - Missing fields: {missing}")
-        
-        if missing:
-            missing_list = ','.join(missing)
-            return f"Cannot finalize order. Missing: {missing_list}. Please provide these details."
-        
-        order_summary = (
-            f'Order confirmed!' 
-            f"1 {self.order_state['size'].capitalize()} {self.order_state['drinkType'].capitalize()} "
-            f"with {self.order_state['milk'].capitalize()} milk "
-            f"for {self.order_state['name'].capitalize()}"
-        )
-        
-        if self.order_state['extras']:
-            extras_text = ", ".join(self.order_state['extras'])
-            order_summary += f" - Extras: {extras_text}"
-    
-        logger.info(f"Order finalized: {self.order_state}")
-        
-        return order_summary
 
 def prewarm(proc: JobProcess):
     proc.userdata["vad"] = silero.VAD.load()
+
 
 async def entrypoint(ctx: JobContext):
     # Logging setup
@@ -224,7 +123,7 @@ async def entrypoint(ctx: JobContext):
 
     # Start the session, which initializes the voice pipeline and warms up the models
     await session.start(
-        agent=FriendlyBarista(),
+        agent=Assistant(),
         room=ctx.room,
         room_input_options=RoomInputOptions(
             # For telephony applications, use `BVCTelephony` for best results
