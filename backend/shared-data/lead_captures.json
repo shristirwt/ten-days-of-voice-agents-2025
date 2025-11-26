@@ -1,0 +1,35 @@
+[
+  {
+    "timestamp": "2025-11-26T19:41:35.247080",
+    "company_name": "Razorpay",
+    "name": null,
+    "email": null,
+    "role": null,
+    "use_case": null,
+    "team_size": null,
+    "timeline": null,
+    "prospect_company": "Fuely"
+  },
+  {
+    "timestamp": "2025-11-26T19:44:48.719310",
+    "company_name": "Razorpay",
+    "name": "Shishti Rawat",
+    "email": "SrishtiRawat68@gmail.com",
+    "role": null,
+    "use_case": null,
+    "team_size": null,
+    "timeline": null,
+    "prospect_company": null
+  },
+  {
+    "timestamp": "2025-11-26T20:00:35.608334",
+    "company_name": "Razorpay",
+    "name": "Shishti Rawat",
+    "email": "Rishi Rawat@Gmail.com",
+    "role": "Founder",
+    "use_case": "Online coding courses for students",
+    "team_size": "50",
+    "timeline": "as soon as possible",
+    "prospect_company": null
+  }
+]
