@@ -1,0 +1,36 @@
+[
+  {
+    "id": "case_001",
+    "userName": "Ankit Joshi",
+    "securityIdentifier": "DOB: 15-03-1990",
+    "cardEnding": "**** 4242",
+    "transactionAmount": "$500",
+    "transactionName": "Amazon Purchase",
+    "transactionTime": "2025-11-27 14:30",
+    "transactionCategory": "e-commerce",
+    "transactionSource": "amazon.com",
+    "location": "Mumbai, India",
+    "status": "confirmed_fraud",
+    "securityQuestion": "What is your favourite teacher's name?",
+    "securityAnswer": "Mrs. Anamika",
+    "outcome": "fraudulent",
+    "outcomeNote": "Customer denied transaction. Card blocked and dispute initiated."
+  },
+  {
+    "id": "case_002",
+    "userName": "Priya Singh",
+    "securityIdentifier": "DOB: 22-07-1995",
+    "cardEnding": "**** 5678",
+    "transactionAmount": "$2000",
+    "transactionName": "International Wire Transfer",
+    "transactionTime": "2025-11-27 09:15",
+    "transactionCategory": "banking",
+    "transactionSource": "overseas",
+    "location": "Singapore",
+    "status": "confirmed_safe",
+    "securityQuestion": "What is your pet's name?",
+    "securityAnswer": "fluffy",
+    "outcome": "safe",
+    "outcomeNote": "Customer confirmed transaction as legitimate."
+  }
+]
