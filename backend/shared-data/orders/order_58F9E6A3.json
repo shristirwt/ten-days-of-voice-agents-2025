@@ -1,0 +1,35 @@
+{
+  "order_id": "58F9E6A3",
+  "timestamp": "2025-11-28T20:35:45.695249",
+  "customer_name": "Rishi Rawat",
+  "delivery_address": "Dhanadun Uttarakhand",
+  "items": {
+    "bread_001": {
+      "name": "Whole Wheat Bread",
+      "quantity": 1,
+      "price": 80,
+      "category": "Groceries"
+    },
+    "deli_meat_001": {
+      "name": "Chicken Deli Meat (200g)",
+      "quantity": 1,
+      "price": 200,
+      "category": "Groceries"
+    },
+    "cheese_001": {
+      "name": "Cheddar Cheese (200g)",
+      "quantity": 1,
+      "price": 300,
+      "category": "Groceries"
+    },
+    "apple_001": {
+      "name": "Red Apples (1kg)",
+      "quantity": 1,
+      "price": 150,
+      "category": "Fruits"
+    }
+  },
+  "total": 730,
+  "status": "received",
+  "estimated_delivery": "30-45 minutes"
+}

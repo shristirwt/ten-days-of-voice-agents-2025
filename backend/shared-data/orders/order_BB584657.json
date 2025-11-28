@@ -1,0 +1,35 @@
+{
+  "order_id": "BB584657",
+  "timestamp": "2025-11-28T20:23:55.858753",
+  "customer_name": "Rishi Rawat",
+  "delivery_address": "Dharadun, Uttarakhand",
+  "items": {
+    "pasta_001": {
+      "name": "Spaghetti Pasta (500g)",
+      "quantity": 2,
+      "price": 100,
+      "category": "Groceries"
+    },
+    "pasta_sauce_001": {
+      "name": "Tomato Pasta Sauce (400ml)",
+      "quantity": 2,
+      "price": 150,
+      "category": "Groceries"
+    },
+    "cheese_001": {
+      "name": "Cheddar Cheese (200g)",
+      "quantity": 2,
+      "price": 300,
+      "category": "Groceries"
+    },
+    "eggs_001": {
+      "name": "Eggs (12 pack)",
+      "quantity": 1,
+      "price": 120,
+      "category": "Groceries"
+    }
+  },
+  "total": 1220,
+  "status": "received",
+  "estimated_delivery": "30-45 minutes"
+}

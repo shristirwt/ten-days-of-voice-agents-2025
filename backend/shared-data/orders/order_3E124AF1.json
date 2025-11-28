@@ -1,0 +1,35 @@
+{
+  "order_id": "3E124AF1",
+  "timestamp": "2025-11-28T20:41:28.581070",
+  "customer_name": "Rishi Rawat",
+  "delivery_address": "Dharadun",
+  "items": {
+    "pasta_001": {
+      "name": "Spaghetti Pasta (500g)",
+      "quantity": 2,
+      "price": 100,
+      "category": "Groceries"
+    },
+    "pasta_sauce_001": {
+      "name": "Tomato Pasta Sauce (400ml)",
+      "quantity": 2,
+      "price": 150,
+      "category": "Groceries"
+    },
+    "cheese_001": {
+      "name": "Cheddar Cheese (200g)",
+      "quantity": 3,
+      "price": 300,
+      "category": "Groceries"
+    },
+    "sandwich_001": {
+      "name": "Grilled Veggie Sandwich",
+      "quantity": 1,
+      "price": 250,
+      "category": "Prepared Food"
+    }
+  },
+  "total": 1650,
+  "status": "received",
+  "estimated_delivery": "30-45 minutes"
+}

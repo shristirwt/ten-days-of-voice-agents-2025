@@ -1,0 +1,170 @@
+[
+  {
+    "id": "bread_001",
+    "name": "Whole Wheat Bread",
+    "category": "Groceries",
+    "price": 80,
+    "brand": "NutriGrain",
+    "tags": ["bread", "healthy", "gluten-free-available"]
+  },
+  {
+    "id": "milk_001",
+    "name": "Fresh Milk (1L)",
+    "category": "Groceries",
+    "price": 60,
+    "brand": "Amul",
+    "tags": ["dairy", "milk"]
+  },
+  {
+    "id": "eggs_001",
+    "name": "Eggs (12 pack)",
+    "category": "Groceries",
+    "price": 120,
+    "brand": "Local Farm",
+    "tags": ["dairy", "protein", "eggs"]
+  },
+  {
+    "id": "peanut_butter_001",
+    "name": "Peanut Butter (500g)",
+    "category": "Groceries",
+    "price": 250,
+    "brand": "Skippy",
+    "tags": ["spread", "protein", "nuts"]
+  },
+  {
+    "id": "pasta_001",
+    "name": "Spaghetti Pasta (500g)",
+    "category": "Groceries",
+    "price": 100,
+    "brand": "Barilla",
+    "tags": ["pasta", "carbs"]
+  },
+  {
+    "id": "pasta_sauce_001",
+    "name": "Tomato Pasta Sauce (400ml)",
+    "category": "Groceries",
+    "price": 150,
+    "brand": "Shan",
+    "tags": ["sauce", "tomato", "vegetarian"]
+  },
+  {
+    "id": "cheese_001",
+    "name": "Cheddar Cheese (200g)",
+    "category": "Groceries",
+    "price": 300,
+    "brand": "Amul",
+    "tags": ["cheese", "dairy"]
+  },
+  {
+    "id": "deli_meat_001",
+    "name": "Chicken Deli Meat (200g)",
+    "category": "Groceries",
+    "price": 200,
+    "brand": "Fresho",
+    "tags": ["meat", "protein", "deli"]
+  },
+  {
+    "id": "banana_001",
+    "name": "Fresh Bananas (1kg)",
+    "category": "Fruits",
+    "price": 60,
+    "brand": "Organic",
+    "tags": ["fruit", "healthy", "organic"]
+  },
+  {
+    "id": "apple_001",
+    "name": "Red Apples (1kg)",
+    "category": "Fruits",
+    "price": 150,
+    "brand": "Imported",
+    "tags": ["fruit", "healthy"]
+  },
+  {
+    "id": "spinach_001",
+    "name": "Fresh Spinach (500g)",
+    "category": "Vegetables",
+    "price": 80,
+    "brand": "Local",
+    "tags": ["vegetable", "leafy", "healthy", "vegan"]
+  },
+  {
+    "id": "tomato_001",
+    "name": "Fresh Tomatoes (1kg)",
+    "category": "Vegetables",
+    "price": 60,
+    "brand": "Local",
+    "tags": ["vegetable", "tomato", "vegan"]
+  },
+  {
+    "id": "potato_001",
+    "name": "Potatoes (2kg)",
+    "category": "Vegetables",
+    "price": 100,
+    "brand": "Local",
+    "tags": ["vegetable", "potato", "vegan"]
+  },
+  {
+    "id": "chips_001",
+    "name": "Potato Chips (150g)",
+    "category": "Snacks",
+    "price": 50,
+    "brand": "Lay's",
+    "tags": ["snack", "chips"]
+  },
+  {
+    "id": "chocolate_001",
+    "name": "Dark Chocolate Bar (100g)",
+    "category": "Snacks",
+    "price": 120,
+    "brand": "Cadbury",
+    "tags": ["snack", "chocolate", "sweet"]
+  },
+  {
+    "id": "granola_001",
+    "name": "Granola Cereal (400g)",
+    "category": "Breakfast",
+    "price": 180,
+    "brand": "Nature Valley",
+    "tags": ["cereal", "breakfast", "healthy"]
+  },
+  {
+    "id": "honey_001",
+    "name": "Pure Honey (500ml)",
+    "category": "Groceries",
+    "price": 350,
+    "brand": "Apis",
+    "tags": ["honey", "organic", "natural"]
+  },
+  {
+    "id": "pizza_001",
+    "name": "Frozen Margherita Pizza",
+    "category": "Prepared Food",
+    "price": 400,
+    "brand": "FreshCart",
+    "tags": ["pizza", "prepared", "vegetarian"]
+  },
+  {
+    "id": "sandwich_001",
+    "name": "Grilled Veggie Sandwich",
+    "category": "Prepared Food",
+    "price": 250,
+    "brand": "FreshCart",
+    "tags": ["sandwich", "prepared", "vegan"]
+  },
+  {
+    "id": "juice_001",
+    "name": "Orange Juice (1L)",
+    "category": "Drinks",
+    "price": 120,
+    "brand": "Tropicana",
+    "tags": ["juice", "orange", "drink"]
+  },
+  {
+    "id": "coffee_001",
+    "name": "Instant Coffee (200g)",
+    "category": "Drinks",
+    "price": 250,
+    "brand": "Nescafe",
+    "tags": ["coffee", "instant", "drink"]
+  }
+]
