@@ -1,0 +1,82 @@
+[
+  {
+    "id": "mug-001",
+    "name": "Stoneware Coffee Mug",
+    "description": "Classic white stoneware coffee mug, perfect for morning coffee",
+    "price": 800,
+    "currency": "INR",
+    "category": "mug",
+    "color": "white",
+    "size": "16oz"
+  },
+  {
+    "id": "mug-002",
+    "name": "Blue Ceramic Mug",
+    "description": "Beautiful blue ceramic mug with a sleek design",
+    "price": 950,
+    "currency": "INR",
+    "category": "mug",
+    "color": "blue",
+    "size": "14oz"
+  },
+  {
+    "id": "tshirt-001",
+    "name": "Classic White T-Shirt",
+    "description": "Comfortable 100% cotton white t-shirt",
+    "price": 599,
+    "currency": "INR",
+    "category": "t-shirt",
+    "color": "white",
+    "size": "M"
+  },
+  {
+    "id": "tshirt-002",
+    "name": "Black Graphic T-Shirt",
+    "description": "Black t-shirt with trendy graphic print",
+    "price": 799,
+    "currency": "INR",
+    "category": "t-shirt",
+    "color": "black",
+    "size": "L"
+  },
+  {
+    "id": "hoodie-001",
+    "name": "Gray Fleece Hoodie",
+    "description": "Warm gray hoodie perfect for cold weather",
+    "price": 1499,
+    "currency": "INR",
+    "category": "hoodie",
+    "color": "gray",
+    "size": "M"
+  },
+  {
+    "id": "hoodie-002",
+    "name": "Black Zip Hoodie",
+    "description": "Stylish black hoodie with full zip closure",
+    "price": 1599,
+    "currency": "INR",
+    "category": "hoodie",
+    "color": "black",
+    "size": "L"
+  },
+  {
+    "id": "cap-001",
+    "name": "Baseball Cap",
+    "description": "Classic adjustable baseball cap",
+    "price": 499,
+    "currency": "INR",
+    "category": "cap",
+    "color": "black",
+    "size": "one size"
+  },
+  {
+    "id": "cap-002",
+    "name": "Red Baseball Cap",
+    "description": "Bright red baseball cap with logo",
+    "price": 599,
+    "currency": "INR",
+    "category": "cap",
+    "color": "red",
+    "size": "one size"
+  }
+]
