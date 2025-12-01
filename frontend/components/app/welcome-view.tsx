@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import { Button } from '@/components/livekit/button';
 
 function WelcomeImage() {
@@ -20,7 +23,7 @@ function WelcomeImage() {
 
 interface WelcomeViewProps {
   startButtonText: string;
-  onStartCall: () => void;
+  onStartCall: (playerName: string) => void;
 }
 
 export const WelcomeView = ({
@@ -28,18 +31,61 @@ export const WelcomeView = ({
   onStartCall,
   ref,
 }: React.ComponentProps<'div'> & WelcomeViewProps) => {
+  const [playerName, setPlayerName] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleStart = async () => {
+    if (!playerName.trim()) {
+      alert('Please enter your name to start!');
+      return;
+    }
+    setIsLoading(true);
+    try {
+      onStartCall(playerName.trim());
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      handleStart();
+    }
+  };
   return (
     <div ref={ref}>
       <section className="bg-background flex flex-col items-center justify-center text-center">
         <WelcomeImage />
 
         <p className="text-foreground max-w-prose pt-1 leading-6 font-medium">
-          Chat live with your voice AI agent
+          Welcome to Improv Battle!
         </p>
 
-        <Button variant="primary" size="lg" onClick={onStartCall} className="mt-6 w-64 font-mono">
-          {startButtonText}
-        </Button>
+        <div className="mt-6 w-64">
+          <input
+            type="text"
+            placeholder="Enter your name"
+            value={playerName}
+            onChange={(e) => setPlayerName(e.target.value)}
+            onKeyPress={handleKeyPress}
+            disabled={isLoading}
+            className="w-full px-4 py-2 mb-4 border border-gray-400 rounded-md text-foreground bg-background placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
+          />
+
+          <Button 
+            variant="primary" 
+            size="lg" 
+            onClick={handleStart} 
+            disabled={isLoading || !playerName.trim()}
+            className="w-full font-mono"
+          >
+            {isLoading ? 'Connecting...' : startButtonText}
+          </Button>
+        </div>
+
+        <p className="text-foreground max-w-prose pt-6 text-sm leading-5 font-normal text-pretty">
+          Get ready for 3 rounds of improv comedy with your AI host!
+        </p>
       </section>
 
       <div className="fixed bottom-5 left-0 flex w-full items-center justify-center">

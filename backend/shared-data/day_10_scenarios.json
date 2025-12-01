@@ -1,0 +1,14 @@
+[
+  {
+    "round": 1,
+    "scenario": "You are a barista who just realized that you've been serving coffee to the same customer for 20 years, and they still don't know your name. Tell them."
+  },
+  {
+    "round": 2,
+    "scenario": "You're a museum tour guide, but you just found out that the famous painting you've been describing for years is actually a fake. How do you tell the tourists?"
+  },
+  {
+    "round": 3,
+    "scenario": "You're a weather forecaster who has to deliver news about an upcoming storm, but you're absolutely petrified of storms. Stay in character while warning people."
+  }
+]

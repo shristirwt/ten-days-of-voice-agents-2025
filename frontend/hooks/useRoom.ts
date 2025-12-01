@@ -7,6 +7,7 @@ export function useRoom(appConfig: AppConfig) {
   const aborted = useRef(false);
   const room = useMemo(() => new Room(), []);
   const [isSessionActive, setIsSessionActive] = useState(false);
+  const [playerName, setPlayerName] = useState<string | undefined>();
 
   useEffect(() => {
     function onDisconnected() {
@@ -68,8 +69,11 @@ export function useRoom(appConfig: AppConfig) {
     [appConfig]
   );
 
-  const startSession = useCallback(() => {
+  const startSession = useCallback((name?: string) => {
     setIsSessionActive(true);
+    if (name) {
+      setPlayerName(name);
+    }
 
     if (room.state === 'disconnected') {
       const { isPreConnectBufferEnabled } = appConfig;
@@ -104,5 +108,5 @@ export function useRoom(appConfig: AppConfig) {
     setIsSessionActive(false);
   }, []);
 
-  return { room, isSessionActive, startSession, endSession };
+  return { room, isSessionActive, startSession, endSession, playerName };
 }
